@@ -1,0 +1,51 @@
+
+doctype html
+html(lang='en')
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        title #{title}
+
+        link(rel="stylesheet", href="/css/toastr.min.css")
+        link(rel="stylesheet", href="/css/fonts.css")
+        link(rel="stylesheet", href="/css/themify-icons.css")
+        link(rel="stylesheet", href="/css/fontawesome-all.min.css")
+        link(rel="stylesheet", href="/css/lnr.css")
+        link(rel="stylesheet", href="/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/css/bootstrap-grid.min.css")
+        link(rel="stylesheet", href="/css/bootstrap-reboot.min.css")
+        link(rel="stylesheet", href="/css/smartable.css")
+        link(rel="stylesheet", href="/css/modal.css")
+        link(rel="stylesheet", href="/css/base.css")
+        link(rel="stylesheet", href="/css/jquery.modal.min.css")
+        link(rel="stylesheet", href="/css/widget.css")
+        link(rel="stylesheet", href="/css/jquery.timepicker.css")
+
+        style
+            block styles
+
+        script(src="/scripts/bootstrap.min.js")
+        script.
+            $.fn.bsModal = $.fn.modal.noConflict();
+        script(src="/scripts/jquery.js")
+        script(src="/scripts/jquery.mask.js")
+        script(src="/scripts/jquery.modal.min.js")
+        script(src="/scripts/jquery.timepicker.min.js")
+        script.
+            $.modal.defaults.fadeDuration = 250;
+        script(src="/scripts/toastr.min.js")
+        script(src="/socket.io/socket.io.js")
+
+        script(src="/scripts/utils.js")
+        script(src="/scripts/dragndrop.js")
+        script(src="/scripts/form-handler.js")
+        script(src="/scripts/smartable.js")
+        script(src="/scripts/fold.js")
+        script(src="/scripts/modal.js")
+        script(src="/scripts/widget.js")
+
+        block scripts
+    body
+        include /pug/form.pug
+        script.
+            global = !{JSON.stringify(global)}
+        block content

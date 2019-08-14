@@ -1,0 +1,17 @@
+extends /layout/base.pug
+
+block append styles
+    include /css/default.css
+
+block append content
+    // main topbar
+    include /elements/main-topbar.pug
+    // main menubar
+    include /elements/main-menubar.pug
+    // content
+    .content.page
+        block page
+    // main footer
+    include /elements/main-footer.pug
+    // main sidebar
+    include /elements/main-sidebar.pug
